@@ -1,0 +1,12 @@
+
+.title {
+    font-size:large;
+    font-family: monospace;
+    text-align: center;
+    padding-top: 2rem;
+    display: none;
+}
+
+.divider {
+    border-top: 1px solid black;
+}

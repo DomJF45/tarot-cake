@@ -1,25 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './components/home'
+import Generate from './components/generate';
+import ReactCardFlip from 'react-card-flip';
+import { useEffect, useState } from 'react';
+import Navbar from './components/Navbar/Navbar';
+
+let face = false;
+let back = false;
+
+let prophecy1 = false;
+let prophecy2 = false;
+let prophecy3 = false;
+
+let used = 1;
+let unused = -1;
+let temp = 0;
+let usedArray = [];
+let cards = [];
+
+
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Home></Home>
+      
+      <Generate></Generate>
     </div>
-  );
+    );
 }
-
 export default App;
