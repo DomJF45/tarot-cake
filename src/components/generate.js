@@ -4,6 +4,7 @@ import imagespool from '../imagesPool'
 import ReactCardFlip from 'react-card-flip'
 import { useEffect, useState } from 'react';
 import { Button } from "./Button";
+import { CardBio } from "./CardBio";
 import './generate.css';
 
 
@@ -37,25 +38,31 @@ export default class Generate extends Component {
             <div>
                 <div className="cards">
                     
-                    <span id="cards1" style={{display: 'none'}}>
+                    <span className="card-container-1" id="cards1" style={{display: 'none'}}>
                         <img id="image1" src="rider-waite-deck/back.png" onClick={showCardOne} /> 
-                        
-                        <h2 className='past'>Past</h2>
-                        <p className='info1' id='i1'></p>
+                        <div className='bio-container'>
+                            <h2 className='past'>Past</h2>
+                            <p className='info1' id='i1'></p>
+                            <p className='bio1' id='b1'></p>
+                        </div>
                     </span>
 
-                    <span id="cards2" style={{display: 'none'}}> 
+                    <span className="card-container-2" id="cards2" style={{display: 'none'}}> 
                         <img id="image2" src="rider-waite-deck/back.png" onClick={showCardTwo}/>
-                        
-                        <h2 className='present'>Present</h2>
-                        <p className='info2' id='i2'></p>
+                        <div className='bio-container'>
+                            <h2 className='present'>Present</h2>
+                            <p className='info2' id='i2'></p>
+                            <p className='bio2' id='b2'></p>
+                        </div>
                     </span>
 
-                    <span id="cards3" style={{display: 'none'}}> 
+                    <span className="card-container-3" id="cards3" style={{display: 'none'}}> 
                         <img id="image3" src="rider-waite-deck/back.png" onClick={showCardThree} /> 
-                        
-                        <h2 className='future'>Future</h2>
-                        <p className='info3' id ='i3'></p>
+                        <div className='bio-container'>
+                            <h2 className='future'>Future</h2>
+                            <p className='info3' id ='i3'></p>
+                            <p className='bio3' id='b3'></p>
+                        </div>
                     </span>
 
                 </div>
@@ -89,15 +96,16 @@ export default class Generate extends Component {
 function choseCards() {
     // assigns used array to unused
     for (let i = 0; i < 3; i++) {
-        usedArray[i] = unused;
+        usedArray[i] = unused; // populates each index with unused -1
     }
     // array assigns cards
     for (let i = 0; i < 3; i++) {
         // assigns temp random number
         do {
-            temp = Math.floor(Math.random() * 78)
-        } while (usedArray[temp] === used) // catches used number
-        usedArray[temp] = used; // assigns number not used
+            temp = Math.floor(Math.random() * 78) //generates random number
+        } while (usedArray[temp] === used) // catches used number -> if not used continues, if it is used, the while loop generates another random number
+
+        usedArray[temp] = used; // assigns used to the index array to mark number has been used
         cards[i] = 'rider-waite-deck/' + temp +'.jpg'// assigns card
         
     }
@@ -138,6 +146,8 @@ function showCardOne() {
     document.getElementById('image1').src  = cards[0];
     document.getElementById('i1').innerHTML = `${info[0]}`;
     document.getElementById('i1').style.display = 'block';
+    document.getElementById('b1').innerHTML = `${bio[0]}`;
+    document.getElementById('b1').style.display = 'block';
     
 }
 
@@ -146,6 +156,8 @@ function showCardTwo() {
     document.getElementById('image2').src  = cards[1];
     document.getElementById('i2').innerHTML = `${info[1]}`;
     document.getElementById('i2').style.display = 'block';
+    document.getElementById('b2').innerHTML = `${bio[1]}`;
+    document.getElementById('b2').style.display = 'block';
 }
 
 function showCardThree() {
@@ -153,6 +165,8 @@ function showCardThree() {
     document.getElementById('image3').src  = cards[2];
     document.getElementById('i3').innerHTML = `${info[2]}`;
     document.getElementById('i3').style.display = 'block';
+    document.getElementById('b3').innerHTML = `${bio[2]}`;
+    document.getElementById('b3').style.display = 'block';
 }
 
 function regenerateCards() {
@@ -162,8 +176,13 @@ function regenerateCards() {
     document.getElementById('image3').src  = 'rider-waite-deck/back.png';
 
     document.getElementById('i1').style.display = 'none';
+    document.getElementById('b1').style.display = 'none';
     document.getElementById('i2').style.display = 'none';
+    document.getElementById('b2').style.display = 'none';
     document.getElementById('i3').style.display = 'none';
+    document.getElementById('b3').style.display = 'none';
+    bio = [];
+    info = [];
 
     choseCards();
     generateName();
@@ -172,74 +191,97 @@ function regenerateCards() {
 
 
 let info = [];
+let bio = [];
 
 function generateName() {
     for (let i = 0; i < 3; i++) {
         if (cards[i] === 'rider-waite-deck/' + 0 +'.jpg') {
             info[i] = 'The Fool';
+            bio[i] = CardBio.theFool.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 1 +'.jpg') {
             info[i] = 'The Magician';
+            bio[i] = CardBio.theMagician.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 2 +'.jpg') {
             info[i] = 'The High Priestess';
+            bio[i] = CardBio.theHighPriestess.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 3 +'.jpg') {
             info[i] = 'The Empress';
+            bio[i] = CardBio.theEmpress.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 4 +'.jpg') {
             info[i] = 'The Emperor';
+            bio[i] = CardBio.theEmperor.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 5 +'.jpg') {
             info[i] = 'The Hierophant';
+            bio[i] = CardBio.theHierophant.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 6 +'.jpg') {
             info[i] = 'The Lovers';
+            bio[i] = CardBio.theLovers.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 7 +'.jpg') {
             info[i] = 'The Chariot';
+            bio[i] = CardBio.theChariot.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 8 +'.jpg') {
             info[i] = 'Strength';
+            bio[i] = CardBio.theStrength.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 9 +'.jpg') {
             info[i] = 'The Hermit';
+            bio[i] = CardBio.theHermit.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 10 +'.jpg') {
             info[i] = 'Wheel of Fortune';
+            bio[i] = CardBio.wheelOfFortune.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 11 +'.jpg') {
             info[i] = 'Justice';
+            bio[i] = CardBio.justice.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 12 +'.jpg') {
             info[i] = 'The Hanged Man';
+            bio[i] = CardBio.theHangedMan.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 13 +'.jpg') {
             info[i] = 'Death';
+            bio[i] = CardBio.death.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 14 +'.jpg') {
             info[i] = 'Temperance';
+            bio[i] = CardBio.temperance.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 15 +'.jpg') {
             info[i] = 'The Devil';
+            bio[i] = CardBio.theDevil.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 16 +'.jpg') {
             info[i] = 'The Tower';
+            bio[i] = CardBio.theTower.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 17 +'.jpg') {
             info[i] = 'The Star';
+            bio[i] = CardBio.theStar.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 18 +'.jpg') {
             info[i] = 'The Moon';
+            bio[i] = CardBio.theMoon.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 19 +'.jpg') {
             info[i] = 'The Sun';
+            bio[i] = CardBio.theSun.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 20 +'.jpg') {
             info[i] = 'Judgement';
+            bio[i] = CardBio.judgement.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 21 +'.jpg') {
             info[i] = 'The World';
+            bio[i] = CardBio.theWorld.bio;
         }
         else if (cards[i] === 'rider-waite-deck/' + 22 +'.jpg') {
             info[i] = 'Ace of Wands';
@@ -410,6 +452,6 @@ function generateName() {
             info[i] = 'King of Pentacles';
         }
     }
-    return info;
+    return info, bio;
 }
 

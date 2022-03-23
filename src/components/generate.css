@@ -1,22 +1,36 @@
 .cards {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 30px;
-    flex-shrink: 1;
+  display: flex;
+  justify-content: center;
+  
+  
 }
 
 #genBtn {
   background-color: white;
   color: black;
-  border: 2px solid black;
+  border: 1px solid black;
   transition-duration: 0.5s;
   padding: 2em 3em;
   font-size: large;
   font-family: monospace;
   font-weight: bolder;
-  letter-spacing: .25em;
+  letter-spacing: 0.25em;
   margin-top: 15%;
+}
 
+.card-container-1 {
+  display: flex;
+  margin: 5rem;
+}
+
+.card-container-2 {
+  display: flex;
+  margin: 5rem;
+}
+
+.card-container-3 {
+  display: flex;
+  margin: 5rem;
 }
 
 #genBtn:hover {
@@ -25,14 +39,24 @@
 }
 
 .past {
+  
+  justify-content: center;
+  align-items: center;
   text-align: center;
-}
+  
+  }
 
 .present {
+  max-width: fit-content;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
 .future {
+  max-width: fit-content;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -48,24 +72,44 @@
   text-align: center;
 }
 
+.bio1 {
+  text-align: center;
+}
+
+.bio2 {
+  text-align: center;
+}
+
+.bio3 {
+  text-align: center;
+}
+
+.bio-container {
+  display: grid;
+  max-width: fit-content;
+  justify-content: center;
+  align-items: center;
+  
+}
+
 @media screen and (max-width: 960px) {
-    .cards {
-      position: relative;
-      display: grid;
-    }
-
-    #genBtn {
-      padding: 10px 10px;
-    
-      outline: none;
-      cursor: pointer;
-      border: 2px solid black;
-      
-      display: inline-block;
-    }
-
-    #genBtn:hover {
-      background-color: black;
-      color: white;
-    }
+  .cards {
+    position: relative;
+    display: grid;
   }
+
+  #genBtn {
+    padding: 10px 10px;
+
+    outline: none;
+    cursor: pointer;
+    border: 1px solid black;
+
+    display: inline-block;
+  }
+
+  #genBtn:hover {
+    background-color: black;
+    color: white;
+  }
+}

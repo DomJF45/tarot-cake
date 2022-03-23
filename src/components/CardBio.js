@@ -1,5 +1,6 @@
-export const CardBio = [
-    {
+export const CardBio = {
+    
+    theFool: {
         title: "The Fool",
         bio: "The Fool is the start of any new adventure. You are about to embark on a new path that you are unfamiliar with. You have the utmost belief in the universe and trust the destination to reveal itself upon the journey.",
         Symbolism: "Luck, Blind Faith, Inexperience",
@@ -7,7 +8,7 @@ export const CardBio = [
         Present: "When The Fool shows up in the present position of your tarot spread, he is encouraging you to go for it! Is there an exciting possibility ahead that you’re feeling a little nervous or unsure about? The message here is to seize the day! Don’t be afraid to be spontaneous! Go ahead and follow your heart. The Fool tarot card in the present position is a very powerful card. Take a chance and enjoy a fresh start if your heart is calling you to do so. Let your inner child play and try not to let responsibilities and commitments dictate your life.",
         Future: "It’s looking like a new adventure might be just around the corner! Whether the love of your life is about to cross your path or your dream job is about to pop up, The Fool in the future position is really exciting! Keep your eyes open for new opportunities and try not to let worries or fears stand in your way. Enjoy what the universe is bringing you and just say “Yes, I can!”"
     },
-    {
+    theMagician: {
         title: "The Magician",
         bio: "The Magician points to your capabilities and your full potential. Success derives from your qualities and tapping into the them, not by hiding and repressing them. The Magician shows you to not hold back qualities that need expressing as this will only hold yourself back further.",
         Symbolism: "Honesty, Potential, Transformation",
@@ -15,7 +16,7 @@ export const CardBio = [
         Present: "You’ve arrived at a place in your life where you have everything you need to manifest your dreams and ambitions, but the time is now! Everything that you want is easily at your disposal, you just need to engage your determination and willpower to make it manifest. The Magician is a powerful card to receive, especially in the present position! Whether you are looking for love or a career change, this tarot card encourages you to dream big and go for it!",
         Future: "The Magician in the future position is telling you to keep going – you are almost there! You’ve been putting in the hard work and following the proper course of action to achieve your goals. Keep at it and continue honing all of your skills. You are about to have everything you need at your disposal to bring your vision to life."
     },
-    {
+    theHighPriestess: {
         title: "The High Priestess",
         bio: "The High Priestess symbolizes mystery and tranquility. This card serves as a sign to retreat into your subconscious to reflect on your current situation. Meditate on your innerself and let your instincts guide you.",
         Symbolism: "Introspection, Reflection, Passivity",
@@ -23,7 +24,7 @@ export const CardBio = [
         Present: "Can you tell the difference between your thoughts and your intuition? When the High Priestess emerges in your reading, she is guiding you to a place of quiet self-reflection. This tarot card represents sacred knowledge and wisdom, so getting it in the present position advises you to look for answers within. When you stop the mental chatter and listen to your heart, do you already know what the “right” answer is? Try to clear the mind of fears and worries and listen to what feels right to you. Pay attention to your feelings and your dreams, and everything else that is being revealed to you beneath the surface.",
         Future: "There may be a big decision on the horizon where things may not be as they seem. Be careful not to take the situation at face value. Listen to your intuition and read between the lines as challenges come up. Answers to your questions might be revealed to you in your dreams or sudden moments of insight. Trust your heart and move forward with patience and calm."
     },
-    {
+    theEmpress: {
         title: "The Empress",
         bio: "The Empress card serves as a sign of maternal power. The hope of a new family is reinforced by the presence of The Empress. This card represents creation, from family and romance to art and business.",
         Symbolism: "Maternity, Creation, Love",
@@ -31,7 +32,7 @@ export const CardBio = [
         Present: "You are in a wonderful place in your life right now. You feel secure and know that love and abundance are available to you. If you’ve recently started a creative project, you are seeing it flourish and grow. Stay connected to your gratitude and express your appreciation as often as you can. Abundance begets abundance in all forms.",
         Future: "You definitely have some pleasures coming your way with The Empress in the future position! You are about to manifest your desires and you have good fortune coming your way. The Empress of the Major Arcana represents abundance of all kinds, so whether you’re looking for romance or a boost to your financial situation, things are about to get good."
     },
-    {
+    theEmperor: {
         title: "The Emperor",
         bio: "This card is suggestive of stability and security in life. You are on top of things and everything in under your control. It is your hard work, discipline and self control that have bought you this far. It means that you are in charge of your life now setting up your own rules and boundaries.",
         Symbolism: "Control, Stability, Security",
@@ -39,7 +40,7 @@ export const CardBio = [
         Present: "It looks like your life is pretty well under control and you have found a way to create an organized and structured environment for yourself. Whether it’s your home life, your community or your workplace, the rules are predictable and life is relatively stable. There may be an authority figure in your life who is guiding you. In the upright position, The Emperor reminds you that authority is on your side.",
         Future: "Brace yourself for a big change! You’re going to have to adapt to a new set of rules and regulations in the near future that could throw you for a loop. But if you face these challenges boldly, this new system will provide you with extra security and you’ll wind up feeling like you have more control over your life."
     },
-    {
+    theHierophant: {
         title: "The Hierophant",
         bio: "Hierophant stands for tradition and convention. It can represent marriage in an arranged setup. It can also mean a teacher or counsellor who will help in learning / education of the querent.",
         Symbolism: " Stuff about the Hierophant symbolism ",
@@ -47,7 +48,7 @@ export const CardBio = [
         Present: "Are you exploring a new spiritual group or community? Although you might be leaving behind some individuality, this new sense of belonging will open up new doors for you. Through regular spiritual practice, the mysteries of the universe will gradually be revealed to you.",
         Future: "It looks like you will be developing a relationship with a spiritual guide or mentor in the near future. This wise teacher will support you in your personal spiritual evolution, and you will be able to join a cause that’s greater than yourself."
     },
-    {
+    theLovers: {
         title: "The Lovers",
         bio: "The Lovers represent relationships and choices. Its appearance in a spread indicates some decision about an existing relationship, a temptation of the heart, or a choice of potential partners. Often an aspect of the querent's life will have to be sacrificed; a bachelor(ette)'s lifestyle may be sacrificed and a relationship gained (or vice versa), or one potential partner may be chosen while another is turned down. Whatever the choice, it should not be made lightly, as the ramifications will be lasting.",
         Symbolism: " Stuff about the Lovers symbolism ",
@@ -55,7 +56,7 @@ export const CardBio = [
         Present: "If love hasn’t captured your heart yet, it’s about to! In the present position, The Lovers tarot card indicated that love is right around the corner. And if you are already in a relationship, it’s about to evolve to a new level. Because this card also represents choices, you may need to make a decision about your level of commitment, whether to another person or your career or family. Some sacrifice might be called for if you want to commit fully.",
         Future: "Get ready for something new and exciting coming your way in the field of romance and passion! The Lovers in the future position indicates that you are in a place energetically to receive love and that you will shortly attract it into your life. Take this time to contemplate what you truly desire in a relationship so that you can manifest a harmonious partnership."
     },
-    {
+    theChariot: {
         title: "The Chariot",
         bio: "The Chariot is a card about overcoming conflicts and moving forward in a positive direction. One needs to keep going on and through sheer hard work and commitment he will be victorious.",
         Symbolism: " Stuff about the Chariot symbolism ",
@@ -63,7 +64,7 @@ export const CardBio = [
         Present: "Success is at hand and your hard work is paying off! The Chariot is bringing you to the finish line of your race, and you’ve arrived in first place. This Major Arcana card also represents duality, because the charioteer has to manage the two sphinxes pulling his chariot. They can pull in opposing directions, so you must remain focused.",
         Future: "Whatever you are going through right now, The Chariot in the future position ensures your ultimate success! This Major Arcana card is at its most powerful in the future position and indicates that your plans are being supported by the universe."
     },
-    {
+    theStrength: {
         title: "The Strength",
         bio: "Strength predicts the triumphant conclusion to a major life problem, situation or temptation through strength of character. It is a very happy card if you are fighting illness or recovering from injury.",
         Symbolism: " Stuff about the Strength symbolism ",
@@ -71,7 +72,7 @@ export const CardBio = [
         Present: "Kudos to you for maintaining your composure through challenging times! Your non-confrontational nature is allowing you to handle difficult situations gracefully. The Strength card making an appearance in the present position of your tarot card reading is an excellent indicator of collaborative relationships and working with others in a cooperative way.",
         Future: "You might have been struggling to maintain your composure lately, so The Strength card showing up in the future position is a welcome sign that you are about to get your emotions under control. The more you work on releasing the ego’s need for attachment and control, the more easily you will let painful events roll right off of your shoulders. As you grow your inner power, you will feel less inclined to need to control others or allow them to control you."
     },
-    {
+    theHermit: {
         title: "The Hermit",
         bio: "The Hermit suggests that you are in a phase of introspection where you are drawing your attention inwards and looking for answers within. You are in need of a period of inner reflection, away from the current demands of your position.",
         Symbolism: " Stuff about the Hermit symbolism ",
@@ -79,7 +80,7 @@ export const CardBio = [
         Present: "You are currently in a period of retreat and withdrawal. You are reflecting on your life path and what truly matters to you. Have you been discarded by a loved one recently? Are you feeling lonely and isolated? Are you withdrawing from the world to avoid something negative or is your retreat nourishing your soul? The Hermit asks you to look within to discover how you got to this place. If something painful happened to you, what can you do to prevent this from happening again in the future? Sometimes we trust the wrong people or fail to set firm boundaries. A time of introspection can guide you toward greater self-love and lift you up into a higher vibration.",
         Future: "It looks like you’re going to be spending some time doing some deep soul searching in the near future. You might be choosing to remove yourself from a toxic situation that requires you to disconnect from your life as you know it. Or perhaps you will realize that your current life path is not fulfilling you on a soul level. You may need to retreat to plan and strategize a way forward. The Hermit in the future position portends the ending of a chapter in your life and the beginning of something new. You’ll be guided by your inner wisdom to problem-solve effectively and come out with a newfound sense of freedom and purpose."
     },
-    {
+    wheelOfFortune: {
         title: "Wheel of Fortune",
         bio: "A common aspect to most interpretations of this card within a reading is to introduce an element of change in the querent's life, such change being in station, position or fortune: such as the rich becoming poor, or the poor becoming rich.",
         Symbolism: " Stuff about the Wheel of fortune symbolism ",
@@ -87,7 +88,7 @@ export const CardBio = [
         Present: "It’s time to celebrate! The Wheel of Fortune in the present position means luck is on your side! You are about to have a wonderful stroke of luck or swift resolution to your problems. Because this card deals with karma, these changes often deal with long term challenges within relationships or personal struggles and challenges. And if your life has been smooth sailing, The Wheel of Fortune doesn’t predict disaster, but rather asks you to appreciate what you have.",
         Future: "Your life is about to get exciting! The Wheel of Fortune is in your future position, which means that big changes are underfoot. Depending on the focus of your tarot card reading, whatever intentions you have set in motion and have been working toward are about to manifest in a positive way. We can’t predict how things will unfold, but as long as you remain flexible your outcome is likely to be very positive."
     },
-    {
+    justice: {
         title: "Justice",
         bio: "The Justice card indicates that the fairest decision will be made. Justice is the sword that cuts through a situation, and will not be swayed by outer beauty when deciding what is fair and just.",
         Symbolism: " Stuff about Justice symbolism.",
@@ -95,7 +96,7 @@ export const CardBio = [
         Present: "Karma is about to be served in your favor! The truth is coming out and those who harmed you are going to be forced to take responsibility. A big decision is at hand, and the outcome will be guided by fairness and accountability. If you are involved in a legal battle, it will be decided in your favor.",
         Future: "Stay balanced and listen to both sides of the story when a major decision comes your way in the near future. Make the effort to really understand the facts and weigh all options carefully. Everything you have been working toward is about to come to head, and if you have been acting in good faith, Lady Justice is going to reward you."
     },
-    {
+    theHangedMan: {
         title: "The Hanged Man",
         bio: "The Hanged Man is the card that suggests ultimate surrender, sacrifice, or being suspended in time.",
         Symbolism: " Stuff about the Hanged Man symbolism ",
@@ -103,7 +104,7 @@ export const CardBio = [
         Present: "Take a breath and walk away from conflict! The Hanged Man in the present position is telling you not to fall into the trap of engaging in conflicts with other people. If you are in a toxic relationship, try to just recognize it for what it is, and take the steps to remove yourself from it. When we say surrender, we don’t mean give up and give in, it means surrendering to the notion that the situation is what it is. We cannot control other people’s behavior, only our own choices, so rather than trying to fix the situation, you should take steps to protect yourself.",
         Future: "There’s a storm brewing in your future, so be sure not to become wrapped up in it. Take care to make sure you don’t get painted as the aggressor. Choose the path of least resistance and walk away from conflict. When people really want to fight with you, sometimes the best thing we can do is withhold the conflict itself by refusing to engage in it."
     },
-    {
+    death: {
         title: "Death",
         bio: "Unlikely that this card actually represents a physical death. Typically it implies an end, possibly of a relationship or interest, and therefore implies an increased sense of self-awareness.",
         Symbolism: " Stuff about Death symbolism ",
@@ -111,7 +112,7 @@ export const CardBio = [
         Present: "You’re in a challenging situation right now and you know that you have to let something go. The change that is upon you right now can’t be stopped. If you can accept that this is the way things need to be, you will soon discover something new and beautiful on the other side. Change can hurt, and the emotions around that are normal. But if you can surrender to the universe and understand that you are opening the door to blessings, even if you can’t see how things will unfold, your transition will be easier for you.",
         Future: "You are going to have a major change or loss in your future, but it is nothing that you can’t withstand! When The Death card comes to bring an end to something in our lives it also brings lessons. The journey of The Fool through the Major Arcana is all about growing spiritually. Every challenge and obstacle we overcome makes us stronger and wiser. As we overcome and release, we learn our own strengths, and we also make room for beautiful new opportunities."
     },
-    {
+    temperance: {
         title: "Temperance",
         bio: "This card indicates that you should learn to bring about balance, patience and moderation in your life. You should take the middle road, avoiding extremes and maintain a sense of calm.",
         Symbolism: " Stuff about the Temperance symbolism ",
@@ -119,7 +120,7 @@ export const CardBio = [
         Present: "Temperance has presented in your tarot card reading as a reminder to remain calm and patient in the face of any adversity. Are you dealing with a tough situation or relationship? Hang onto your grace and composure and all will be well.",
         Future: "Whatever you’re going through right now, you have peace and tranquility on the horizon! With Temperance in your future you just need to hang in there a little bit longer – your troubles are about to come to an end. Look forward to wellness and balance in your life, whether in relationships, career, or any other aspect of your life."
     },
-    {
+    theDevil: {
         title: "The Devil",
         bio: "It represents being seduced by the material world and physical pleasures. Also living in fear, domination and bondage, being caged by an overabundance of luxury, discretion should be used in personal and business matters.",
         Symbolism: " Stuff about The Devil symbolism ",
@@ -127,7 +128,7 @@ export const CardBio = [
         Present: "When The Devil card makes an appearance in your present position it’s a warning to do some honest soul searching. Are you running from your problems? Are you numbing the pain instead of dealing with the situation head-on? The Devil card indicates that we have chosen to become slaves to something. Maybe it’s work, maybe it’s too much exercise, maybe it’s drugs or relationships that fill a hole but don’t really mean anything to you on a deeper level.",
         Future: "You’re headed down a dangerous path if you don’t stop and examine what is driving you. Are you getting swept up in a toxic environment? Are you pursuing a course of action that you know will be detrimental to you in the long run? The Devil card in the future is warning you to look at your motivations and choices honestly. There may be someone alluring in your future that you know will lead you into a world of pain. Make the effort to tame your passions when you find yourself tempted to walk down a path of self-destructive behavior."
     },
-    {
+    theTower: {
         title: "The Tower",
         bio: "The Tower is commonly interpreted as meaning danger, crisis, destruction, and liberation. It is associated with sudden unforseen change.",
         Symbolism: " Stuff about The Tower symbolism ",
@@ -135,7 +136,7 @@ export const CardBio = [
         Present: "When the world is falling apart around you there is no sense in sitting around and going down in flames. Jump to your freedom while you still can. There is a great upheaval in your life when the Tower card appears in the present position. There is no stopping this change because the faulty foundations have been exposed. However, this can really be seen as a blessing, because the illusions and lies will also go down in flames!",
         Future: "There’s no easy way to say it. In the future position, The Tower card indicates that you are in for some major upheaval and life-altering change. It’s true that these shocking events can shake us to the core, but they also force us to grow spiritually. Like the baby bird that gets kicked out of the nest so that it can learn to fly, a tower moment will have you feeling like the world is out of control. Stay calm and remember that these lessons are training grounds, and you will emerge the better for it."
     },
-    {
+    theStar: {
         title: "The Star",
         bio: "When the Star card appears, you are likely to find yourself feeling inspired. It brings renewed hope and faith and a sense that you are truly blessed by the universe at this time.",
         Symbolism: " Stuff about The Star symbolism ",
@@ -143,7 +144,7 @@ export const CardBio = [
         Present: "Are you falling in love with someone new or a new idea? You’re surrounded by hope and inspiration right now. The Star card in your present position is a symbol of your innermost wishes and dreams and you are about to begin a new journey! But because this Major Arcana card also represents purity and vulnerability, do be sure that you aren’t seeing things through rose-colored glasses. We want to stay connected to our purset desires, but also keep one foot on the ground.",
         Future: "No matter what is going on in your life right now, and no matter how difficult it might be, don’t give up hope! The Star in your future is here to tell you that you will have a chance at beginning something brand new and beautiful in the very near future! You will find peace and rejuvenation and you will heal from whatever painful event you went through."
     },
-    {
+    theMoon: {
         title: "The Moon",
         bio: "The Moon is a card of illusion and deception, and therefore often suggests a time when something is not as it appears to be. Perhaps a misunderstanding on your part, or a truth you cannot admit to yourself.",
         Symbolism: " Stuff about the Moon symbolism ",
@@ -151,7 +152,7 @@ export const CardBio = [
         Present: "There’s more going on than meets the eye right now, and you need to do a little digging to get to the bottom of things. Beneath the surface, there is information that needs to be revealed. The Moon card in the present position encourages you to take some time to explore the messages your heart is sending you. Don’t dismiss worries or fears because they may be messengers, but don’t run wild with them either! There is a difference between exploring shadows and letting negative emotions take over.",
         Future: "A time of creativity and feminine inspiration is approaching. Do you have some emotions dwelling in your subconscious that you want to express? With the Moon card in the future it will be a good time to get involved in an artistic project. But remember that the Moon also brings illusion and can lead us into our shadow side."
     },
-    {
+    theSun: {
         title: "The Sun",
         bio: "The card portends good fortune, happiness, joy and harmony. It represents the universe coming together and agreeing with your path and aiding forward movement into something greater.",
         Symbolism: " Stuff about the Sun symbolism ",
@@ -159,7 +160,7 @@ export const CardBio = [
         Present: "You are shining like the sun right now and success is following you in whatever you do! Your relationships are joyful, your career is fulfilling, and you’re enjoying recognition. Whatever aspect The Sun card represents in your reading, it will be positive and abundant. You’re full of energy and optimism right now and the world is your oyster. This tarot card indicates that you are at your most powerful right now but in a healthy way.",
         Future: "Whatever you are dealing with right now you are guaranteed an excellent outcome! The Sun in the future position of your tarot card reading is telling you that everything is going to work out in your favor! If you’re having some trouble in your love life or some problems at work, don’t fret. You will be happy with the end result soon enough."
     },
-    {
+    judgement: {
         title: "Judgement",
         bio: "This card is referred to as a time of resurrection and awakening, a time when a period of our life comes to an absolute end making way for dynamic new beginnings.",
         Symbolism: " Stuff about Judgement symbolism ",
@@ -167,7 +168,7 @@ export const CardBio = [
         Present: "You are at the precipice of a major decision that will impact your life in a profound way. Gather all of your life’s lessons and trust your heart. Have the courage to make the right decision based on what honors you and your truth. Let go of any past wounds, shame, or guilt, and face this challenge with truth and integrity. You will need both your intuition and your intellect to take advantage of this life-changing transformation and respond to your inner calling.",
         Future: "You are about to be presented with an opportunity to remake your life with honesty and integrity. The Judgement card in the future position indicates that a big change is coming and your choice will offer you the opportunity to live a new life in freedom and grace. If things have felt cloudy and confusing, clarity is around the corner. The choice may be a difficult one, but if you use your intellect and intuition for the greatest good, you will find liberation."
     },
-    {
+    theWorld: {
         title: "The World ",
         bio: "The World represents an ending to a cycle of life, a pause in life before the next big cycle beginning with the fool. It is an indicator of a major and inexorable change, of tectonic breadth.",
         Symbolism: " Stuff about the World symbolism ",
@@ -175,7 +176,7 @@ export const CardBio = [
         Present: "Are you wondering if things are too good to be true? Are you worried that the blessings that are coming your way right now are not real? It’s not every day that people see their dreams actually manifest in real life, but that is exactly what is happening to you right now. Whether you’re marrying the love of your life or starting your first day of work at your dream job, The World card represents arriving at everything you have been working toward.",
         Future: "You are on the right track, just keep going! The World card is in your future position to encourage you to keep doing what you’re doing. It is leading you to the fulfillment of your dreams. Trust yourself and move forward with confidence because you are almost there!"
     },
-    {
+    aceOfWands: {
         title: "Ace of Wands",
         bio: "This card in a reading signifies success in all aspects. ... This combination of success backed by hard work and luck is what forms the basis of the Ace card in the Tarot deck. The element of the wands suit is fire. The key words are Passion, New Ventures, Success, good luck.",
         Symbolism: " ",
@@ -183,7 +184,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    twoOfWands: {
         title: "Two of Wands",
         bio: "The Two of Wands meaning revolves around making decisions. In other words, you are either satisfied with your current knowledge, or you are moving forward and taking risks. It means, leaving our comfort zones and exploring new territory. Upright Love Meaning.",
         Symbolism: "  ",
@@ -191,7 +192,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    threeOfWands: {
         title: "Three of Wands",
         bio: "The Three of Wands signals the many chances available to you to broaden your horizons through study, travel, business enterprise and learning. You are becoming more aware of the opportunities that exist for you right now – and there are still more to come. To take advantage of this potential, you must stay committed to your path and be prepared to stretch beyond your comfort zone, knowing your best hopes lie outside of your current environment.",
         Symbolism: "  ",
@@ -199,7 +200,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    fourOfWands: {
         title: "Four of Wands",
         bio: "The Four of Wands is a card of joyful celebration, blissful happiness and appreciation for the good things in life. When this card appears in a Tarot reading, it is the perfect time to celebrate with those you love most. You may commemorate a significant event or milestone such as a wedding, birthday, homecoming or reunion.",
         Symbolism: "  ",
@@ -207,7 +208,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    fiveOfWands: {
         title: "Five of Wands",
         bio: " ",
         Symbolism: "  ",
@@ -215,7 +216,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    sixOfWands: {
         title: "Six of Wands",
         bio: " ",
         Symbolism: "  ",
@@ -223,7 +224,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    sevenOfWands: {
         title: "Seven of Wands",
         bio: " ",
         Symbolism: "  ",
@@ -231,7 +232,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    eightOfWands: {
         title: "Eight of Wands",
         bio: " ",
         Symbolism: "  ",
@@ -239,7 +240,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    nineOfWands: {
         title: "Nine of Wands",
         bio: " ",
         Symbolism: "  ",
@@ -247,7 +248,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    tenOfWands: {
         title: "Ten of Wands",
         bio: " ",
         Symbolism: "  ",
@@ -255,7 +256,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    pageOfWands: {
         title: "Page of Wands",
         bio: " ",
         Symbolism: "  ",
@@ -263,7 +264,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    knightOfWands: {
         title: "Knight of Wands",
         bio: " ",
         Symbolism: "  ",
@@ -271,7 +272,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    queenOfWands: {
         title: "Queen of Wands",
         bio: " ",
         Symbolism: "  ",
@@ -279,7 +280,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    kingOfWands: {
         title: "King of Wands",
         bio: " ",
         Symbolism: "  ",
@@ -287,7 +288,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    aceOfCups: {
         title: "Ace of Cups",
         bio: " ",
         Symbolism: " ",
@@ -295,7 +296,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    twoOfCups: {
         title: "Two of Cups",
         bio: " ",
         Symbolism: "  ",
@@ -303,7 +304,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    threeOfCups: {
         title: "Three of Cups",
         bio: " ",
         Symbolism: "  ",
@@ -311,7 +312,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    fourOfCups: {
         title: "Four of Cups",
         bio: " ",
         Symbolism: "  ",
@@ -319,7 +320,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    fiveOfCups: {
         title: "Five of Cups",
         bio: " ",
         Symbolism: "  ",
@@ -327,7 +328,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    sixOfCups: {
         title: "Six of Cups",
         bio: " ",
         Symbolism: "  ",
@@ -335,7 +336,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    sevenOfCups: {
         title: "Seven of Cups",
         bio: " ",
         Symbolism: "  ",
@@ -343,7 +344,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    eightOfCups: {
         title: "Eight of Cups",
         bio: " ",
         Symbolism: "  ",
@@ -351,7 +352,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    nineOfCups: {
         title: "Nine of Cups",
         bio: " ",
         Symbolism: "  ",
@@ -359,7 +360,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    tenOfCups: {
         title: "Ten of Cups",
         bio: " ",
         Symbolism: "  ",
@@ -367,7 +368,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    pageOfCups: {
         title: "Page of Cups",
         bio: " ",
         Symbolism: "  ",
@@ -375,7 +376,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    knightOfCups: {
         title: "Knight of Cups",
         bio: " ",
         Symbolism: "  ",
@@ -383,7 +384,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    queenOfCups: {
         title: "Queen of Cups",
         bio: " ",
         Symbolism: "  ",
@@ -391,7 +392,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    kingOfCups: {
         title: "King of Cups",
         bio: " ",
         Symbolism: "  ",
@@ -399,7 +400,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    aceOfSwords: {
         title: "Ace of Swords",
         bio: " ",
         Symbolism: " ",
@@ -407,7 +408,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    twoOfSwords: {
         title: "Two of Swords",
         bio: " ",
         Symbolism: "  ",
@@ -415,7 +416,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    threeOfSwords: {
         title: "Three of Swords",
         bio: " ",
         Symbolism: "  ",
@@ -423,7 +424,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    fourOfSwords: {
         title: "Four of Swords",
         bio: " ",
         Symbolism: "  ",
@@ -431,7 +432,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    fiveOfSwords: {
         title: "Five of Swords",
         bio: " ",
         Symbolism: "  ",
@@ -439,7 +440,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    sixOfSwords: {
         title: "Six of Swords",
         bio: " ",
         Symbolism: "  ",
@@ -447,7 +448,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    sevenOfSwords: {
         title: "Seven of Swords",
         bio: " ",
         Symbolism: "  ",
@@ -455,7 +456,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    eightOfSwords: {
         title: "Eight of Swords",
         bio: " ",
         Symbolism: "  ",
@@ -463,7 +464,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    nineOfSwords: {
         title: "Nine of Swords",
         bio: " ",
         Symbolism: "  ",
@@ -471,7 +472,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    tenOfSwords: {
         title: "Ten of Swords",
         bio: " ",
         Symbolism: "  ",
@@ -479,7 +480,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    pageOfSwords: {
         title: "Page of Swords",
         bio: " ",
         Symbolism: "  ",
@@ -487,7 +488,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    knightOfSwords: {
         title: "Knight of Swords",
         bio: " ",
         Symbolism: "  ",
@@ -495,7 +496,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    queenOfSwords: {
         title: "Queen of Swords",
         bio: " ",
         Symbolism: "  ",
@@ -503,7 +504,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    kingOfSwords: {
         title: "King of Swords",
         bio: " ",
         Symbolism: "  ",
@@ -511,7 +512,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    aceOfPentacles: {
         title: "Ace of Pentacles",
         bio: " ",
         Symbolism: " ",
@@ -519,7 +520,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    twoOfPentacles: {
         title: "Two of Pentacles",
         bio: " ",
         Symbolism: "  ",
@@ -527,7 +528,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    threeOfPentacles: {
         title: "Three of Pentacles",
         bio: " ",
         Symbolism: "  ",
@@ -535,7 +536,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    fourOfPentacles: {
         title: "Four of Pentacles",
         bio: " ",
         Symbolism: "  ",
@@ -543,7 +544,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    fiveOfPentacles: {
         title: "Five of Pentacles",
         bio: " ",
         Symbolism: "  ",
@@ -551,7 +552,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    sixOfPentacles: {
         title: "Six of Pentacles",
         bio: " ",
         Symbolism: "  ",
@@ -559,7 +560,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    sevenOfPentacles: {
         title: "Seven of Pentacles",
         bio: " ",
         Symbolism: "  ",
@@ -567,7 +568,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    eightOfPentacles: {
         title: "Eight of Pentacles",
         bio: " ",
         Symbolism: "  ",
@@ -575,7 +576,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    nineOfPentacles: {
         title: "Nine of Pentacles",
         bio: " ",
         Symbolism: "  ",
@@ -583,7 +584,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    tenOfpentacles: {
         title: "Ten of Pentacles",
         bio: " ",
         Symbolism: "  ",
@@ -591,7 +592,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    pageOfPentacles: {
         title: "Page of Pentacles",
         bio: " ",
         Symbolism: "  ",
@@ -599,7 +600,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    knightOfPentacles: {
         title: "Knight of Pentacles",
         bio: " ",
         Symbolism: "  ",
@@ -607,7 +608,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    queenOfPentacles: {
         title: "Queen of Pentacles",
         bio: " ",
         Symbolism: "  ",
@@ -615,7 +616,7 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
+    kingOfPentacles: {
         title: "King of Pentacles",
         bio: " ",
         Symbolism: "  ",
@@ -623,117 +624,4 @@ export const CardBio = [
         Present: " ",
         Future: " "
     },
-    {
-        title: "Ace of Pentacles",
-        bio: " ",
-        Symbolism: " ",
-        Past: " ",
-        Present: " ",
-        Future: " "
-    },
-    {
-        title: "Two of Pentacles",
-        bio: " ",
-        Symbolism: "  ",
-        Past: " ",
-        Present: " ",
-        Future: " "
-    },
-    {
-        title: "Three of Pentacles",
-        bio: " ",
-        Symbolism: "  ",
-        Past: " ",
-        Present: " ",
-        Future: " "
-    },
-    {
-        title: "Four of Pentacles",
-        bio: " ",
-        Symbolism: "  ",
-        Past: " ",
-        Present: " ",
-        Future: " "
-    },
-    {
-        title: "Five of Pentacles",
-        bio: " ",
-        Symbolism: "  ",
-        Past: " ",
-        Present: " ",
-        Future: " "
-    },
-    {
-        title: "Six of Pentacles",
-        bio: " ",
-        Symbolism: "  ",
-        Past: " ",
-        Present: " ",
-        Future: " "
-    },
-    {
-        title: "Seven of Pentacles",
-        bio: " ",
-        Symbolism: "  ",
-        Past: " ",
-        Present: " ",
-        Future: " "
-    },
-    {
-        title: "Eight of Pentacles",
-        bio: " ",
-        Symbolism: "  ",
-        Past: " ",
-        Present: " ",
-        Future: " "
-    },
-    {
-        title: "Nine of Pentacles",
-        bio: " ",
-        Symbolism: "  ",
-        Past: " ",
-        Present: " ",
-        Future: " "
-    },
-    {
-        title: "Ten of Pentacles",
-        bio: " ",
-        Symbolism: "  ",
-        Past: " ",
-        Present: " ",
-        Future: " "
-    },
-    {
-        title: "Page of Pentacles",
-        bio: " ",
-        Symbolism: "  ",
-        Past: " ",
-        Present: " ",
-        Future: " "
-    },
-    {
-        title: "Knight of Pentacles",
-        bio: " ",
-        Symbolism: "  ",
-        Past: " ",
-        Present: " ",
-        Future: " "
-    },
-    {
-        title: "Queen of Pentacles",
-        bio: " ",
-        Symbolism: "  ",
-        Past: " ",
-        Present: " ",
-        Future: " "
-    },
-    {
-        title: "King of Pentacles",
-        bio: " ",
-        Symbolism: "  ",
-        Past: " ",
-        Present: " ",
-        Future: " "
-    },
-
-]
+}

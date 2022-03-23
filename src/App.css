@@ -2,7 +2,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: monospace;
+  font-family: Inter !important;
+  font-weight: 200;
+  letter-spacing: 2px;
 }
 
 .App {
@@ -25,7 +27,7 @@
   min-height: 10vh;
   display: flex;
   flex-direction: row;
-  
+
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -34,21 +36,17 @@
   color: #61dafb;
 }
 
-#dailytarot{
+#dailytarot {
   text-align: center;
   flex-direction: column;
 }
 
 .cards {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 30px;
-    flex-shrink: 1;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px;
+  flex-shrink: 1;
 }
-
-
-
-
 
 #regen {
   background-color: black;
@@ -59,7 +57,7 @@
   font-size: large;
   font-family: monospace;
   font-weight: bolder;
-  letter-spacing: .25em;
+  letter-spacing: 0.25em;
   margin-top: 10%;
 }
 
@@ -76,4 +74,3 @@
     transform: rotate(360deg);
   }
 }
-
