@@ -1,0 +1,64 @@
+.top-container {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+
+#open {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 35px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  float: right;
+  z-index: 1;
+  margin-top: -2rem;
+}
+
+#close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 35px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  float: right;
+  z-index: 1;
+  margin-top: -2rem;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+.sidebar a {
+  display: block;
+  padding: 8px 8px 8px 30px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #303030;
+  transition: 0.3s;
+  margin-top: 2rem;
+  text-align: start;
+  word-wrap: none;
+}
+.sidebar a:hover {
+  cursor: pointer;
+  color: #6d6565;
+}

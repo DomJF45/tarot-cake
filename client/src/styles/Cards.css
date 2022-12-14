@@ -1,0 +1,39 @@
+.cards-container {
+  display: flex;
+  /* grid-template-columns: 20% 20% 20%; */
+  gap: 8rem;
+  justify-content: center;
+}
+
+.cards-container-hidden {
+  display: none;
+}
+
+.card-img {
+  border-radius: 15px;
+  transition: .2s ease-in-out;
+}
+
+.card-img:hover {
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  transform: scale(1.02) translateY(-10px);
+}
+
+#inner-card {
+  margin: 0 auto;
+  width: 600px;
+}
+
+#card-bio {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+@media screen and (max-width: 1030px) {
+  .cards-container {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
