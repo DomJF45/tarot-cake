@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../styles/Footer.css';
+import { DivDivider } from '../../styled-components/styles';
 
 const Footer = () => {
   return (
@@ -8,7 +9,6 @@ const Footer = () => {
         <h3>Tarot Cake</h3>
         <p>2022</p>
       </div>
-      <Footer />
     </>
   )
 }

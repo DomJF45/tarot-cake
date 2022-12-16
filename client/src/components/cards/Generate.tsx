@@ -8,7 +8,7 @@ const Generate = () => {
 
   return (
     <div>
-      <div style={generate ? {display: 'none'} : {display: 'block'}}>
+      <div style={generate ? {display: 'none'} : {display: 'block', marginTop: '250px', marginBottom: '600px'}}>
         <p>Get your daily tarot reading now...</p>
         <Button style={{backgroundColor: '#fff', color: '#303030'}} onClick={():void => setGenerate(true)}>Generate</Button>
       </div>

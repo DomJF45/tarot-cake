@@ -43,7 +43,7 @@ const Cards = (props: Props) => {
   }, [])
 
   return (
-    <div style={{position: 'relative', marginBottom: '80vh'}}>
+    <div style={{position: 'relative', marginTop: '10%', marginBottom: '30%'}}>
       <div 
         className={props.generate ? 'cards-container' : 'cards-container-hidden'}
       >

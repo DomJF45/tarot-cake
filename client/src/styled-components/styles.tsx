@@ -68,3 +68,8 @@ export const DivDivider = styled.div`
   background-color: #303030;
   width: 100%;
 `
+
+export const TextContainer = styled.div`
+  margin-block: 4rem;
+  line-height: 150%;
+`

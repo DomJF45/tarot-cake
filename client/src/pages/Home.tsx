@@ -10,7 +10,6 @@ const Home = () => {
       <div id="home">
         <h1 style={{marginTop: '5rem', marginBottom: '3rem'}}>Tarot Cake</h1>
         <DivDivider style={{backgroundColor: '#fff', height: '1px'}} />
-        <div style={{padding: '2rem'}}></div>
         <Generate />
       </div>
       <About />
