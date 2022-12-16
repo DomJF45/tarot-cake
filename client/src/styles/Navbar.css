@@ -2,16 +2,41 @@
   margin: 0;
   padding: 0;
   position: relative;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.btn-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  color: #303030;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .1s ease-in;
+  z-index: 13;
+}
+
+.btn-background:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: .1s ease-in;
 }
 
 
 #open {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 10vw;
   font-size: 35px;
   cursor: pointer;
   background-color: transparent;
+  border-radius: 50%;
   color: #fff;
   padding: 5px 10px;
   border: none;
@@ -23,10 +48,11 @@
 #close {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 10vw;
   font-size: 35px;
   cursor: pointer;
   background-color: transparent;
+  border-radius: 50%;
   color: #fff;
   padding: 5px 10px;
   border: none;
@@ -36,29 +62,43 @@
 }
 
 .sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+  right: 0;
   background-color: #fff;
   overflow-x: hidden;
-  padding-top: 60px;
+  padding-block: 5px;
   transition: 0.5s;
+  border-radius: 15px;
+  overflow: hidden;
 }
 .sidebar a {
   display: block;
-  padding: 8px 8px 8px 30px;
+  padding: 15px 8px 15px 20px;
   text-decoration: none;
   font-size: 25px;
   color: #303030;
   transition: 0.3s;
-  margin-top: 2rem;
+  margin-top: 1rem;
   text-align: start;
   word-wrap: none;
+  width: 138px;
+  margin-left: 1rem;
+  border-radius: 10px;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 .sidebar a:hover {
   cursor: pointer;
-  color: #6d6565;
+  color: #fff;
+  background-color: #7A4D99;
+}
+
+@media screen and (max-width: 1030px) {
+  .top-container {
+    width: 90%;
+    
+    z-index: 13;
+  }
 }

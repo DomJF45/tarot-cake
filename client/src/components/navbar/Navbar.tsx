@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 import '../../styles/Navbar.css';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 const Navbar = () => {
 
@@ -15,9 +17,11 @@ const Navbar = () => {
   return (
     <div className='top-container'>
       <div className='dynamic-sidebar'>
-        <button onClick={():void => setShow(!show)} id='open' style={show ? {display: 'none'}:{display: 'block'}}>&#9776;</button>
-        <button onClick={():void => setShow(!show)} id='close' style={show ? {display: 'block'}:{display: 'none'}}>&times;</button>
-        <div id='my-sidebar' className='sidebar' style={show ? {width: '250px'} : {width: 0}}>
+        <div className='btn-background' onClick={(): void => setShow(!show)}>
+          { show ? <CloseIcon /> : <MenuIcon />}
+        </div>
+        
+        <div id='my-sidebar' className='sidebar' style={show ? {opacity: 1, width: '200px', height: '300px'} : {opacity: 0, width: 0, height: 0}}>
           <a onClick={(): void => handleNavigate('/login')}>Login</a>
           <a>Settings</a>
           <a>History</a>

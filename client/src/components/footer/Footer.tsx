@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <div className='footer-container'>
         <h3>Tarot Cake</h3>
-        <p>2022</p>
+        <p style={{fontSize: 'smaller'}}> &#169; Dominick Founds 2022</p>
       </div>
     </>
   )

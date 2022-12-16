@@ -8,7 +8,7 @@ const About = () => {
     <>
       <div className='about-container'>
         <div className='content-container' style={{paddingTop: '5rem'}}>
-          <h1 style={{color: "#a741eb"}}>A Daily Tarot Card generator to gain introspection for your past, present, and future</h1>
+          <h1 style={{color: "#7A4D99"}}>A Daily Tarot Card generator to gain introspection for your past, present, and future</h1>
             <TextContainer>
               <h2>What is Tarot Cake?</h2>
               <DivDivider style={{width: '10%', backgroundColor: "#a741eb"}} />
