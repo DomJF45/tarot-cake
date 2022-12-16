@@ -3,6 +3,7 @@ import { NavigateFunction, useNavigate } from 'react-router-dom';
 import '../../styles/Navbar.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { display } from '@mui/system';
 
 const Navbar = () => {
 
@@ -17,7 +18,7 @@ const Navbar = () => {
   return (
     <div className='top-container'>
       <div className='dynamic-sidebar'>
-        <div className='btn-background' onClick={(): void => setShow(!show)}>
+        <div className='btn-background' style={show ? {backgroundColor: 'transparent'} : {backgroundColor: "#fff"}} onClick={(): void => setShow(!show)}>
           { show ? <CloseIcon /> : <MenuIcon />}
         </div>
         
