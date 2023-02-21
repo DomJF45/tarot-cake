@@ -3,6 +3,7 @@
   /* grid-template-columns: 20% 20% 20%; */
   gap: 8rem;
   justify-content: center;
+  position: relative;
 }
 
 .cards-container-hidden {

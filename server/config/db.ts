@@ -5,8 +5,10 @@ dotenv.config();
 export const connectDb = async(): Promise<void> => {
 
   try {
-    await connect(process.env.MONGO_URI!);
+    const conn = await connect(process.env.MONGO_URI!);
+    console.log(`Connected to ${conn.connection.host}`);
   } catch (err: any) {
-    
+    console.log(err);
+    process.exit(1);
   }
 }

@@ -15,6 +15,7 @@ const Generate = () => {
       <div>
         <Cards generate={generate} />
       </div>
+      
     </div>
   )
 }

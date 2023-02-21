@@ -25,7 +25,7 @@ const Navbar = () => {
         <div id='my-sidebar' className='sidebar' style={show ? {opacity: 1, width: '200px', height: '300px'} : {opacity: 0, width: 0, height: 0}}>
           <a onClick={(): void => handleNavigate('/login')}>Login</a>
           <a>Settings</a>
-          <a>History</a>
+          <a onClick={(): void => handleNavigate('/history')}>History</a>
           <a onClick={(): void => handleNavigate('/')}>Home</a>
         </div>
       </div>

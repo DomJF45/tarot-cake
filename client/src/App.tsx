@@ -10,6 +10,7 @@ import Home from './pages/Home'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import Footer from './components/footer/Footer'
+import History from './pages/History'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/history' element={<History />} />
       </Routes>
     </div>
   )
