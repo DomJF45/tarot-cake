@@ -8,8 +8,8 @@
 .history-title-container {
   display: flex;
   justify-content: start;
-  border-bottom: 1px solid rgba(255,255,255, .87);
   width: 75%;
+  border-bottom: 1px solid rgba(255,255,255, .63);
 }
 
 .history-item {
@@ -35,4 +35,33 @@
 .history-card:hover {
   transform: translateY(-5px);
 
+}
+
+@media screen and (max-width: 1030px) {
+  .history-title-container {
+    flex-direction: column;
+    width: 81%;
+  }
+  .history-card-container {
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .history-item {
+    padding-block: 20px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+  }
+  .history-card {
+    width: 100%;
+  }
+  .history-card > img {
+    width: 90px;
+  }
+  .history-card > h2 {
+    font-size: 16px;
+    word-wrap: break-word;
+  }
 }

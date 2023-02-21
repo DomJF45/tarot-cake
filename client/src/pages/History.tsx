@@ -4,6 +4,7 @@ import { iHistory } from '../components/history/history.interfaces';
 import axios from 'axios';
 import HistoryFeed from '../components/history/HistoryFeed';
 import '../styles/History.css';
+import { DivDivider } from '../styled-components/styles';
 
 
 
@@ -31,6 +32,7 @@ const History = () => {
     <div className='history-main-container'>
       <div className='history-title-container'>
         <h1>History</h1>
+        
       </div>
       <div>
         {/* index through history array */}

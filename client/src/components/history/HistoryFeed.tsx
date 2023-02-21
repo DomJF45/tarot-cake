@@ -12,8 +12,17 @@ const HistoryFeed = ({date, cards}: Props) => {
 
   return (
     <>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'start',
+          
+        }}
+      >
+        <h3 style={{marginLeft: 0,
+          paddingLeft: 0}}>Date: {date}</h3>
+      </div>
       <div className='history-item'>
-        <h3>Date: {date}</h3>
         <div className='history-card-container'>
           {cards.map((card, index) => {
             return (
