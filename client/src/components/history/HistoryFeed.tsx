@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Card } from '../cards/card.interface'
+import { Card } from '../../interfaces/cards/cards.interface';
 import CardHistory from './CardHistory'
 
 interface Props {

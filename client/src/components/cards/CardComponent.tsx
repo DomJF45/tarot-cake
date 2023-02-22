@@ -1,9 +1,9 @@
 import React, { Dispatch, PropsWithChildren, SetStateAction, useEffect, useState } from 'react'
-import { Card } from './card.interface'
-import { animate, motion } from 'framer-motion'
-import useModal from '../../hooks/useModal'
-import CardModal from './CardModal'
-import { DivDivider } from '../../styled-components/styles'
+import { Card } from '../../interfaces/cards/cards.interface';
+import { animate, motion } from 'framer-motion';
+import useModal from '../../hooks/useModal';
+import CardModal from './CardModal';
+import { DivDivider } from '../../styled-components/styles';
 
 type Props = {
   card: Card,

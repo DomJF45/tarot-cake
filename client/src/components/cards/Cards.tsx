@@ -1,18 +1,18 @@
 import React, { Dispatch, useEffect, useState, SetStateAction } from 'react';
-import axios, { AxiosResponse } from 'axios'
-import { Card } from './card.interface';
-import CardComponent from './CardComponent';
-import '../../styles/Cards.css'
+import axios from 'axios';
+import { Card } from '../../interfaces/cards/cards.interface';
 import { 
   motion,
   AnimateSharedLayout,
   AnimatePresence
 } from 'framer-motion';
-import CardModal from './CardModal';
-import useModal from '../../hooks/useModal';
 import { Button } from '../../styled-components/styles';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
+import { getCards } from '../../features/cards/card.service';
+import useModal from '../../hooks/useModal';
 import useDate from '../../hooks/useDate';
-import { config } from 'process';
+import CardComponent from './CardComponent';
+import '../../styles/Cards.css';
 
 interface CardResponse {
   data?: Card[];
@@ -26,7 +26,8 @@ type Props = {
 const Cards = (props: Props) => {
 
   const { isOpen, toggle } = useModal();
-
+  const dispatch = useAppDispatch();
+  const { cards } = useAppSelector((state) => state.cardState) 
   const defaultCards: Card[] = [];
   const defaultCard: Card = {
     id: -1,
@@ -34,7 +35,7 @@ const Cards = (props: Props) => {
     bio: '',
     image: ''
   }
-  const [cards, setCards]: [Card[], (cards: Card[]) => void] = useState(defaultCards);
+  // const [threeCards, setCards]: [Card[], (cards: Card[]) => void] = useState(defaultCards);
   const [modalCard, setModalCard]: [Card, (card: Card) => void] = useState(defaultCard);
   
 
@@ -60,9 +61,11 @@ const Cards = (props: Props) => {
 
   useEffect(() => {
 
-    axios.get<Card[]>('http://localhost:4000/api/tarot/reading')
-      .then((res) => {setCards(res.data)});
+    // axios.get<Card[]>('http://localhost:4000/api/tarot/reading')
+    //   .then((res) => {setCards(res.data)});
+    dispatch(getCards());
     
+
   }, [])
 
   return (
@@ -70,7 +73,7 @@ const Cards = (props: Props) => {
       <div 
         className={props.generate ? 'cards-container' : 'cards-container-hidden'}
       >
-        {cards.map((card: Card, index: number) => {
+        {cards!.map((card: Card, index: number) => {
           return (<div>
             <AnimateSharedLayout>
               <AnimatePresence>

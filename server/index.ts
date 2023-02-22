@@ -36,7 +36,8 @@ app.use(session({
   store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
   cookie: {
     sameSite: 'lax',
-    maxAge: 1000 * 60 * 60,
+    maxAge: 1000* 60 * 60 * 24,
+    expires: new Date(Date.now() + 3600000 * 24)
   }
 }))
 app.use(express.json());

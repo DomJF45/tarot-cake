@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Dispatch, SetStateAction } from 'react';
-import { Card } from '../components/cards/card.interface';
-import { iHistory } from '../components/history/history.interfaces';
+import { Card } from '../interfaces/cards/cards.interface';
+import { iHistory } from '../interfaces/cards/cards.interface';
 import axios from 'axios';
 import HistoryFeed from '../components/history/HistoryFeed';
 import '../styles/History.css';

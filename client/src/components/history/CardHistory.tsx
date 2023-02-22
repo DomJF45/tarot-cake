@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from '../cards/card.interface';
+import { Card } from '../../interfaces/cards/cards.interface';
 import CardModal from '../cards/CardModal';
 import useModal from '../../hooks/useModal';
 import { DivDivider } from '../../styled-components/styles';
