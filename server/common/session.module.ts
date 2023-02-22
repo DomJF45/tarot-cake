@@ -11,6 +11,7 @@ declare module 'express-session' {
     history: [
       {
         date: string,
+        time: string,
         cards: Card[]
       }
     ]

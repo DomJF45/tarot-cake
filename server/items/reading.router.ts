@@ -45,9 +45,9 @@ readingRouter.get("/", async(req: Request, res: Response) => {
 readingRouter.post("/save", (req: Request, res: Response) => {
   
   try {
-    const { date, cards } = req.body;
+    const { date, time, cards } = req.body;
 
-    const cardHistory = { date, cards };
+    const cardHistory = { date, time, cards };
     
     const { history } = req.session;
 

@@ -8,8 +8,11 @@ const useDate = () => {
   if (mm < 10) { mm = '0' + mm.toString()};
 
   const formattedToday: string = dd + '/' + mm + '/' + yyyy;
+  const formattedTime: string = new Date().toLocaleTimeString();
 
-  return formattedToday;
+  const hookDate = {formattedToday, formattedTime}
+
+  return hookDate;
 }
 
 export default useDate;

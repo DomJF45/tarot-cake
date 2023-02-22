@@ -8,8 +8,7 @@
 .history-title-container {
   display: flex;
   justify-content: start;
-  width: 75%;
-  border-bottom: 1px solid rgba(255,255,255, .63);
+  width: 60%;
 }
 
 .history-item {
@@ -17,7 +16,7 @@
   display: flex;
   justify-content: start;
   gap: 2rem;
-  border-bottom: 1px solid rgba(255,255,255, .63);
+  border-top: 1px solid rgba(255,255,255, .63);
   padding-bottom: 3rem;
 }
 
@@ -25,7 +24,7 @@
   display: flex;
   width: 850px;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .history-card {

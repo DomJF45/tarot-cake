@@ -1,11 +1,72 @@
-import { Card, CardState } from '../../interfaces/cards/cards.interface';
-import { createSlice } from '@reduxjs/toolkit';
-import * as CardService from './card.service';
+import { Card, CardState, iHistory } from '../../interfaces/cards/cards.interface';
+import { createSlice, ThunkAction, createAsyncThunk } from '@reduxjs/toolkit';
+import cardService from './card.service';
+
+type CardError = {
+  message: string
+};
 
 const initialState: CardState = {
   cards: [],
-  loading: 'idle'
+  history: [],
+  loading: 'idle',
+  message: ''
 }
+
+export const getThreeCards = createAsyncThunk<
+Card[] | undefined,
+void,
+{rejectValue: CardError}
+>('tarot/reading', 
+async (_: void, thunkAPI) => {
+  try {
+
+    return await cardService.getCards();
+
+  } catch (err: any) {
+    return thunkAPI.rejectWithValue({
+      message: "Cannot get initial three cards"
+    })
+  }
+});
+
+export const saveHistory = createAsyncThunk<
+  void, 
+  iHistory, 
+  {rejectValue: CardError}>(
+  'tarot/save',
+  async (data, thunkAPI) => {
+    try {
+
+      await cardService.saveToHistory(data);
+
+    } catch (err) {
+      return thunkAPI.rejectWithValue({
+        message: "Could not save cards to history"
+      })
+    }
+  }
+);
+
+export const getHistory = createAsyncThunk<
+  iHistory[] | undefined,
+  void,
+  {rejectValue: CardError}>(
+  'tarot/history',
+  async (_: void, thunkAPI) => {
+
+    try {
+
+      return await cardService.getCardHistory();
+
+    } catch (err) {
+      return thunkAPI.rejectWithValue({
+        message: "Could not get History"
+      })
+    }
+
+  }
+)
 
 export const cardSlice = createSlice({
   name: 'cards',
@@ -18,15 +79,39 @@ export const cardSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(CardService.getCards.fulfilled, (state, action) => {
+      .addCase(getThreeCards.fulfilled, (state, action) => {
         state.loading = 'success';
         state.cards = action.payload;
       })
-      .addCase(CardService.getCards.rejected, (state, action) => {
+      .addCase(getThreeCards.rejected, (state, action) => {
         state.loading = 'failed';
         state.cards = [];
+        state.message = action.payload;
       })
-      .addCase(CardService.getCards.pending, (state, action) => {
+      .addCase(getThreeCards.pending, (state) => {
+        state.loading = 'pending';
+      })
+
+      .addCase(saveHistory.fulfilled, (state) => {
+        state.loading = 'success';
+      })
+      .addCase(saveHistory.rejected, (state, action) => {
+        state.loading = 'failed';
+        state.message = action.payload;
+      })
+      .addCase(saveHistory.pending, (state) => {
+        state.loading = 'pending';
+      })
+
+      .addCase(getHistory.fulfilled, (state, action) => {
+        state.history = action.payload?.reverse();
+        state.loading = 'success';
+      })
+      .addCase(getHistory.rejected, (state, action) => {
+        state.loading = 'failed';
+        state.message = action.payload;
+      })
+      .addCase(getHistory.pending, (state) => {
         state.loading = 'pending';
       })
   }

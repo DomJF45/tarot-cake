@@ -8,7 +8,6 @@ import { DivDivider } from '../../styled-components/styles';
 type Props = {
   card: Card,
   index: number,
-  setCard: (card: Card) => void
 }
 
 const CardComponent = (props: Props) => {
@@ -30,10 +29,6 @@ const CardComponent = (props: Props) => {
       toggle();
     }
   }
-
-  useEffect(() => {
-    props.setCard(props.card);
-  }, [])
 
   return (
     <div

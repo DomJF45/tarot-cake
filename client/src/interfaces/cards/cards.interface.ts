@@ -7,11 +7,14 @@ export interface Card {
 }
 
 export interface iHistory {
-  date: string,
-  cards: Card[]
+  date: string;
+  time: string;
+  cards: Card[] | undefined;
 }
 
 export interface CardState {
-  cards: Card[] | undefined,
-  loading: 'idle' | 'pending' | 'success' | 'failed'
+  cards: Card[] | undefined;
+  history: iHistory[] | undefined;
+  loading: 'idle' | 'pending' | 'success' | 'failed';
+  message: unknown;
 }
