@@ -10,6 +10,7 @@ import { notFoundHandler } from './middleware/not-found.middleware';
 import session from 'express-session';
 import { testRouter } from './items/cart.test';
 import MongoStore from 'connect-mongo';
+import { userRouter } from './user/user.router';
 
 dotenv.config();
 
@@ -41,7 +42,7 @@ app.use(session({
   }
 }))
 app.use(express.json());
-
+app.use("/api/user", userRouter)
 app.use("/api/tarot/cards", cardsRouter);
 app.use('/api/tarot/reading', readingRouter);
 app.use('/api/test/cart', testRouter);

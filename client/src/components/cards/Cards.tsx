@@ -7,10 +7,11 @@ import {
 } from 'framer-motion';
 import { Button } from '../../styled-components/styles';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
-import { getThreeCards, saveHistory } from '../../features/cards/card.slice';
+import { } from '../../features/cards/card.slice';
 import useDate from '../../hooks/useDate';
 import CardComponent from './CardComponent';
 import '../../styles/Cards.css';
+import Loading from '../util/loaders/Loading';
 
 interface CardResponse {
   data?: Card[];
@@ -22,6 +23,10 @@ type Props = {
 }
 
 const Cards = (props: Props) => {
+
+  const { loading } = useAppSelector((state) => state.cardState)
+
+  if (loading === 'pending') return <Loading />
 
   return (
     <div style={{position: 'relative', marginTop: '10%', marginBottom: 'calc(30% - 200px)'}}>

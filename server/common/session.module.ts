@@ -1,4 +1,5 @@
 import { Card } from "../items/card.interface"
+import { iUser } from "../user/user.interface";
 
 export interface iCardHistory {
   card1: Card;
@@ -14,7 +15,8 @@ declare module 'express-session' {
         time: string,
         cards: Card[]
       }
-    ]
+    ],
+    user: string;
     
   }
 }

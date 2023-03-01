@@ -2,10 +2,14 @@ import React, { useState } from 'react'
 import { Button } from '../../styled-components/styles';
 import { Link } from 'react-router-dom';
 import '../../styles/Auth.css'
+import { iUser } from '../../interfaces/user/user.interface';
 
 const Register = () => {
 
-
+  const [userName, setUserName] = useState<string>('');
+  const [userEmail, setUserEmail] = useState<string>('');
+  const [userPassword, setUserPassword] = useState<string>('');
+  const [userData, setUserData] = useState<iUser | null>(null);
   const [showPass, setShowPass]: [boolean, (prev:boolean) => void] = useState<boolean>(false);
   
   const handleShowPass = (e: React.MouseEvent<HTMLButtonElement>): void => {
@@ -20,10 +24,10 @@ const Register = () => {
         <div className='form-container'>
           <form className='auth-form'>
             <div>
-              <input type='text' placeholder='Username' />
+              <input type='text' placeholder='Username' value={userData!.name} onChange={(e) => setUserName(e.currentTarget.value)} />
             </div>
             <div>
-              <input type='text' placeholder='Email' />
+              <input type='text' placeholder='Email' value={userData!.name} onClick={(e) => setUserEmail(e.currentTarget.value)} />
             </div>
             <div style={{display: 'flex', justifyContent: 'center'}}>
               <input type={showPass ? 'text' : 'password'} placeholder='Password' />

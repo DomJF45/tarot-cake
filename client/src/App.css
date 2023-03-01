@@ -12,6 +12,7 @@ body {
 #home {
   margin: 0 auto;
   width: 1100px;
+  position: relative;
 }
 
 

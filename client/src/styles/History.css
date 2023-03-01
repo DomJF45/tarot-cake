@@ -45,16 +45,18 @@
     width: 100%;
     flex-wrap: nowrap;
     gap: 10px;
+    justify-content: space-between;
   }
   .history-item {
     padding-block: 20px;
     flex-direction: column;
-    gap: 10px;
+    
     align-items: center;
 
   }
   .history-card {
     width: 100%;
+
   }
   .history-card > img {
     width: 90px;

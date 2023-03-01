@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { getHistory } from '../features/cards/card.slice';
 import HistoryFeed from '../components/history/HistoryFeed';
 import '../styles/History.css';
+import Loading from '../components/util/loaders/Loading';
 
 const History = () => {
 
@@ -18,6 +19,10 @@ const History = () => {
   }, [])
 
   console.log(history);
+
+  if (loading === 'pending') {
+    return <Loading />
+  }
 
   return (
     <div className='history-main-container'>

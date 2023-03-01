@@ -16,10 +16,10 @@ const CardComponent = (props: Props) => {
   const [showBio, setShowBio]: [boolean, (prev: boolean) => void] = useState<boolean>(false);
   const { isOpen, toggle } = useModal();
 
-  let animationProps = {
-    animate: { rotateY: [180, 0]},
-    transition: {duration: 2},
-  }
+  // let animationProps = {
+  //   animate: { rotateY: [180, 0]},
+  //   transition: {duration: 2},
+  // }
 
   const handleFlip = ():void => {
     if (!flipped) {
@@ -37,11 +37,12 @@ const CardComponent = (props: Props) => {
         className='card-img' 
         src={ flipped ? props.card.image : 'https://ik.imagekit.io/wvlrlc0tr/tarot/back.png'} 
         onClick={():void => handleFlip()}
-        animate={flipped ? {rotateY: [90, 0]} : {rotateY: -180}}
-        transition={{duration: .1}}
+        whileTap={ !flipped ? {rotateY: [0, 90], scale: .9}: {}}
+        transition={{ type: "spring", stiffness: 480, damping: 20, duration: .8}}
         whileHover={{
-          scale: 1.02,
-          y: -10
+          scale: 1.05,
+          cursor: 'pointer',
+          transition: { type: "spring", stiffness: 550, damping: 10, duration: .5}
         }}
       />
       <h3

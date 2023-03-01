@@ -3,6 +3,7 @@ import Generate from '../components/cards/Generate'
 import Navbar from '../components/navbar/Navbar'
 import { DivDivider } from '../styled-components/styles'
 import About from '../components/about/About'
+import Loading from '../components/util/loaders/Loading'
 
 const Home = () => {
   return (
