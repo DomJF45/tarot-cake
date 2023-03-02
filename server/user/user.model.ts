@@ -7,7 +7,7 @@ import { iUser } from './user.interface';
 import { unique } from 'jspsych/dist/modules/utils';
 
 export interface UserDocument extends mongoose.Document {
-  email:string, 
+  email: string, 
   name: string,
   password: string,
   history?: iHistory[],
@@ -18,21 +18,24 @@ export interface UserDocument extends mongoose.Document {
 export interface HistoryDocument extends mongoose.Document {
   date: string,
   time: string,
-  cards: Card[]
+  cards: [{
+    id: number,
+    name: string,
+    bio: string,
+    image: string,
+  }]
 }
 
-const CardSchema = new Schema({
-  card1: {
+
+const HistorySchema = new Schema({
+  date: String,
+  time: String,
+  cards: [{
     id: Number,
     name: String,
     bio: String,
     image: String,
-  }
-})
-const HistorySchema = new Schema({
-  date: String,
-  time: String,
-  cards: [CardSchema] 
+  }] 
 })
 
 const UserSchema = new Schema({

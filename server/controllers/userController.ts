@@ -65,6 +65,39 @@ export const login = async (req: Request, res: Response) => {
 
 }
 
+
+export const getUserHistory = async (req: Request, res: Response) => {
+  
+  try {
+ 
+    res.json({history: req.user.history});
+    
+  } catch (err: any) {
+    console.log(err); // fix me later
+    res.sendStatus(400);
+  }
+
+}
+
+export const setUserHistory = async (req: Request, res: Response) => {
+
+  try {
+
+    const { date, time, cards } = req.body;
+
+    const cardHistory = { date, time, cards };
+
+    req.user.history!.push(cardHistory);
+    req.user.save();
+   
+    res.send(201);
+
+  } catch (err: any) {
+    console.log(err);
+  }
+
+}
+
 export const testGetUserCookie = async (req: Request, res: Response) => {
 
   try {
