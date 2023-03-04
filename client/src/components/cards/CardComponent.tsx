@@ -16,11 +16,6 @@ const CardComponent = (props: Props) => {
   const [showBio, setShowBio]: [boolean, (prev: boolean) => void] = useState<boolean>(false);
   const { isOpen, toggle } = useModal();
 
-  // let animationProps = {
-  //   animate: { rotateY: [180, 0]},
-  //   transition: {duration: 2},
-  // }
-
   const handleFlip = ():void => {
     if (!flipped) {
       setFlipped(true)
