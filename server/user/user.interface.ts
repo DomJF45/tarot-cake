@@ -11,6 +11,6 @@ export interface iUser {
   id: Types.ObjectId;
   name: string;
   email: string;
-  password: string;
+  password?: string;
   history: iHistory[]; 
 }

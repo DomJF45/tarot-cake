@@ -32,7 +32,11 @@ export const register = async (req: Request, res: Response): Promise<void | Resp
       req.session.user = user._id.toString();         
     }
     
-    res.send(201);
+    res.json({
+      name: user.name,
+      email: user.email,
+      history: user.history
+    });
 
   } catch(err: any) {
     console.log(err); // fix me later
@@ -54,7 +58,11 @@ export const login = async (req: Request, res: Response) => {
     }
     if (await user.isValidPassword(password)) {
       req.session.user = user._id.toString();
-      res.sendStatus(200);
+      res.json({
+        name: user.name,
+        email: user.email,
+        history: user.history
+      });
     } else {
       throw new Error("Invalid Credentials");
     }
@@ -98,7 +106,7 @@ export const setUserHistory = async (req: Request, res: Response) => {
 
 }
 
-export const testGetUserCookie = async (req: Request, res: Response) => {
+export const getUser = async (req: Request, res: Response) => {
 
   try {
    
@@ -112,6 +120,7 @@ export const testGetUserCookie = async (req: Request, res: Response) => {
       res.json({
         email: u.email,
         name: u.name,
+        history: u.history
       })
     }
 
