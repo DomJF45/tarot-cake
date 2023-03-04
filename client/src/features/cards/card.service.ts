@@ -19,20 +19,35 @@ const getCards = async () => {
 }
 
 const saveToHistory = async (data: iHistory) => {
-  
+ /* 
   await axios.post(`${API_URL}/reading/save`, JSON.stringify(data), {withCredentials: true, headers: {
     'Content-Type': 'application/json'
   }});
-  
+  */
+
+ await axios.post(`http://localhost:4000/api/user/setHistory`, JSON.stringify(data), {withCredentials: true, headers: {
+   'Content-Type': 'application/json'
+ }})
+
+
 }
 
 const getCardHistory = async () => {
+  /*
   const response = await axios.get<iHistory[]>(`${API_URL}/reading/history/`, {withCredentials: true});
 
   console.log(response.data);
 
   if (response.data) {
     
+    return response.data;
+  }
+
+  */
+
+  const response = await axios.get('http://localhost:4000/user/history', {withCredentials: true});
+
+  if (response.data) {
     return response.data;
   }
 

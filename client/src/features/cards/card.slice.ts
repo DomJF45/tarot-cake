@@ -8,7 +8,6 @@ type CardError = {
 
 const initialState: CardState = {
   cards: [],
-  history: [],
   loading: 'idle',
   message: ''
 }
@@ -29,7 +28,7 @@ async (_: void, thunkAPI) => {
     })
   }
 });
-
+/*
 export const saveHistory = createAsyncThunk<
   void, 
   iHistory, 
@@ -67,6 +66,7 @@ export const getHistory = createAsyncThunk<
 
   }
 )
+*/
 
 export const cardSlice = createSlice({
   name: 'cards',
@@ -91,7 +91,7 @@ export const cardSlice = createSlice({
       .addCase(getThreeCards.pending, (state) => {
         state.loading = 'pending';
       })
-
+      /*
       .addCase(saveHistory.fulfilled, (state) => {
         state.loading = 'success';
       })
@@ -114,6 +114,7 @@ export const cardSlice = createSlice({
       .addCase(getHistory.pending, (state) => {
         state.loading = 'pending';
       })
+      */
   }
 })
 

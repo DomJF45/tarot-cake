@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Button } from '../../styled-components/styles';
 import Cards from './Cards';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
-import { getThreeCards, saveHistory } from '../../features/cards/card.slice';
+import { getThreeCards } from '../../features/cards/card.slice';
+import { saveHistory } from '../../features/auth/auth.slice';
 import useDate from '../../hooks/useDate';
 import { iHistory } from '../../interfaces/cards/cards.interface';
 import Loading from '../util/loaders/Loading';

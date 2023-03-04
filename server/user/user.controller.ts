@@ -78,7 +78,7 @@ export const getUserHistory = async (req: Request, res: Response) => {
   
   try {
  
-    res.json({history: req.user.history});
+    res.json(req.user.history);
     
   } catch (err: any) {
     console.log(err); // fix me later

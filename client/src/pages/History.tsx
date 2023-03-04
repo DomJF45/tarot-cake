@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
-import { getHistory } from '../features/cards/card.slice';
+import { getHistory } from '../features/auth/auth.slice';
 import HistoryFeed from '../components/history/HistoryFeed';
 import '../styles/History.css';
 import Loading from '../components/util/loaders/Loading';
@@ -8,9 +8,8 @@ import Loading from '../components/util/loaders/Loading';
 const History = () => {
 
   const dispatch = useAppDispatch();
-  const { history, loading } = useAppSelector((state) => state.cardState)
-  const { user } = useAppSelector((state) => state.authState);
-  
+  const { user, loading } = useAppSelector((state) => state.authState);
+  const history = user!.history;
   const getCardHistory = async () => {
     dispatch(getHistory());
   }
@@ -20,6 +19,7 @@ const History = () => {
   }, [])
 
   console.log(history);
+  console.log(user);
 
   if (loading === 'pending') {
     return <Loading />

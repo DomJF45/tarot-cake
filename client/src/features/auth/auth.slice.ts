@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk, ThunkAction } from "@reduxjs/toolkit";
+import { get } from "http";
 import { iHistory } from "../../interfaces/cards/cards.interface";
 import { iUser } from "../../interfaces/user/user.interface";
 import authService from "./auth.service";
@@ -9,12 +10,14 @@ type UserError = {
 
 interface UserState {
   user: iUser | null;
+  history: iHistory[];
   loading: 'idle' | 'pending' | 'success' | 'failed'; 
   message: unknown;
 }
 
 const initialState: UserState = {
   user: null,
+  history: [],
   loading: 'idle',
   message: '',
 }
@@ -50,6 +53,44 @@ export const register = createAsyncThunk<iUser | null, iUser, {rejectValue: User
     }
   }
 );
+
+export const saveHistory = createAsyncThunk<
+  void,
+  iHistory,
+  {rejectValue: UserError}
+>(
+  'user/saveHistory',
+  async (data, thunkAPI) => {
+
+    try {
+      await authService.saveToHistory(data);
+    } catch (err: any) {
+      return thunkAPI.rejectWithValue({
+        message: "Could not save cards to history"
+      });
+    }
+
+  }
+);
+
+export const getHistory = createAsyncThunk<
+  iHistory[] | undefined,
+  void,
+  { rejectValue: UserError }
+>(
+  'user/history',
+  async (_: void, thunkAPI) => {
+
+    try {
+      return await authService.getHistory();
+    } catch (err: any) {
+      return thunkAPI.rejectWithValue({
+        message: "Could not get History"
+      })
+    }
+
+  }
+)
 
 export const authSlice = createSlice({
   name: 'auth',
@@ -87,6 +128,29 @@ export const authSlice = createSlice({
         state.message = action.payload;
       })
       .addCase(register.pending, (state) => {
+        state.loading = 'pending';
+      })
+
+      .addCase(saveHistory.fulfilled, (state) => {
+        state.loading = 'success';
+      })
+      .addCase(saveHistory.rejected, (state, action) => {
+        state.loading = 'failed';
+        state.message = action.payload;
+      })
+      .addCase(saveHistory.pending, (state) => {
+        state.loading = 'pending';
+      })
+
+      .addCase(getHistory.fulfilled, (state, action) => {
+        state.user!.history = action.payload?.reverse();
+        state.loading = 'success';
+      })
+      .addCase(getHistory.rejected, (state, action) => {
+        state.loading = 'failed';
+        state.message = action.payload;
+      })
+      .addCase(getHistory.pending, (state) => {
         state.loading = 'pending';
       })
   }

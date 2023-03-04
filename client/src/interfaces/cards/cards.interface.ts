@@ -14,7 +14,6 @@ export interface iHistory {
 
 export interface CardState {
   cards: Card[] | undefined;
-  history: iHistory[] | undefined;
   loading: 'idle' | 'pending' | 'success' | 'failed';
   message: unknown;
 }
