@@ -31,13 +31,13 @@ const CardComponent = (props: Props) => {
       <motion.img 
         className='card-img' 
         src={ flipped ? props.card.image : 'https://ik.imagekit.io/wvlrlc0tr/tarot/back.png'} 
-        onClick={():void => handleFlip()}
+        onTap={():void => handleFlip()}
         whileTap={ !flipped ? {rotateY: [0, 90], scale: .9}: {}}
-        transition={{ type: "spring", stiffness: 480, damping: 20, duration: .8}}
+        transition={{ type: "spring", stiffness: 480, damping: 20 }}
         whileHover={{
           scale: 1.05,
           cursor: 'pointer',
-          transition: { type: "spring", stiffness: 550, damping: 10, duration: .5}
+          transition: { type: "spring", stiffness: 550, damping: 10 }
         }}
       />
       <h3

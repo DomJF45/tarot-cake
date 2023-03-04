@@ -26,27 +26,16 @@ const Home = () => {
 
   return (
     <>
-      <div id="home">
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          width: '100%',
-          position: 'relative'
-        }}>
-          
-          <h1 style={{marginTop: '5rem', marginBottom: '3rem'}}>Tarot Cake</h1>
-        </div>
-        
-        <motion.img
-          
+      <div id="home">  
+        <h1 style={{marginTop: '5rem', marginBottom: '3rem'}}>Tarot Cake</h1>
+        <motion.img 
           src={frog}
           whileTap={{
             height: '200px',
             width: '275px'
           }}
-          onTap={bigFart}
-          transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+          onTap={ bigFart }
+          transition={{ type: 'spring', stiffness: 700, damping: 17 }}
           style={{
             width: '225px',
             position: 'absolute',
