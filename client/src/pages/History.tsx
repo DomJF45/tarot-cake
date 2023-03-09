@@ -9,7 +9,8 @@ const History = () => {
 
   const dispatch = useAppDispatch();
   const { user, loading } = useAppSelector((state) => state.authState);
-  const history = user!.history;
+  const history = user ? user.history : null;
+
   const getCardHistory = async () => {
     dispatch(getHistory());
   }
@@ -18,13 +19,11 @@ const History = () => {
     getCardHistory();
   }, [])
 
-  console.log(history);
-  console.log(user);
-
+  
   if (loading === 'pending') {
     return <Loading />
   }
-
+  
   return (
     <div className='history-main-container'>
       <div className='history-title-container'>
