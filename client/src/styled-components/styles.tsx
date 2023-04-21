@@ -38,7 +38,7 @@ export const Form = styled.form`
 
 export const Card = styled.div`
   background-color: #fff;
-  width: 70%;
+  width: 500px;
   height: auto;
   margin: 0 auto;
   margin-top: 8vh;

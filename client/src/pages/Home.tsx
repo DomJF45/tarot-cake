@@ -13,16 +13,9 @@ import moon2 from '../assets/moon2.png';
 import star3 from '../assets/star3.png';
 import star4 from '../assets/star4.png';
 import star5 from '../assets/star5.png';
-import bigfart from '../assets/bigfart.mp3';
 
 const Home = () => {
-
-  const fart = new Audio(bigfart);
-
-  const bigFart = (): void => {
-    fart.currentTime = 0;
-    fart.play();
-  }
+ 
 
   return (
     <>
@@ -31,11 +24,11 @@ const Home = () => {
         <motion.img 
           src={frog}
           whileTap={{
-            height: '200px',
-            width: '275px'
-          }}
-          onTap={ bigFart }
-          transition={{ type: 'spring', stiffness: 700, damping: 17 }}
+            scale: 1.2,
+            height: 130,
+            y: -20
+          }} 
+          transition={{ type: 'spring', stiffness: 700, damping: 10 }}
           style={{
             width: '225px',
             position: 'absolute',
@@ -45,6 +38,7 @@ const Home = () => {
             padding: 0,
             zIndex: '22',
             margin: 0,
+            
           }}
         /> 
         <img src={star1} style={{

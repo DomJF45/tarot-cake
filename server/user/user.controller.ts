@@ -57,27 +57,28 @@ export const login = async (req: Request, res: Response) => {
       throw new Error('User not found');
     }
     if (await user.isValidPassword(password)) {
+      user.set({lastLogin: Date.now()})
+      user.save();
       req.session.user = user._id.toString();
       res.json({
         name: user.name,
         email: user.email,
-        history: user.history
+        history: user.history,
+        lastLogin: user.lastLogin
       });
     } else {
       throw new Error("Invalid Credentials");
     }
-
   } catch(err: any) {
     console.log(err); //fix me later
   }
-
 }
 
 
 export const getUserHistory = async (req: Request, res: Response) => {
   
   try {
- 
+
     res.json(req.user.history);
     
   } catch (err: any) {

@@ -36,12 +36,14 @@ const Cards = (props: Props) => {
         {props.cards!.map((card: Card, index: number) => {
           return (<div>
             <AnimateSharedLayout>
-              <AnimatePresence>
+              <AnimatePresence mode="wait" initial={true}>
                 <motion.div
                   animate={ props.generate ? {scale: [.5, 1.0], rotateY: [180, 0]} : {x: 0}}
                   transition={props.generate && index === 0 ? {duration: .5} : {duration: index / 2}}
                 >
-                  <CardComponent card={card} index={index} />
+                  <AnimatePresence mode="wait" initial={true}>
+                    <CardComponent card={card} index={index} />
+                  </AnimatePresence>
                 </motion.div>
               </AnimatePresence>
             </AnimateSharedLayout>

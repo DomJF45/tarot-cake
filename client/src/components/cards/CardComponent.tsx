@@ -1,6 +1,6 @@
-import React, { Dispatch, PropsWithChildren, SetStateAction, useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Card } from '../../interfaces/cards/cards.interface';
-import { animate, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import useModal from '../../hooks/useModal';
 import CardModal from './CardModal';
 import { DivDivider } from '../../styled-components/styles';
@@ -13,7 +13,7 @@ type Props = {
 const CardComponent = (props: Props) => {
 
   const [flipped, setFlipped]: [boolean, (prev: boolean) => void] = useState<boolean>(false);
-  const [showBio, setShowBio]: [boolean, (prev: boolean) => void] = useState<boolean>(false);
+  
   const { isOpen, toggle } = useModal();
 
   const handleFlip = ():void => {
@@ -26,14 +26,23 @@ const CardComponent = (props: Props) => {
   }
 
   return (
-    <div
-    >
+    <AnimatePresence mode="wait" initial={true}>
       <motion.img 
-        className='card-img' 
+        className='card-img'
+        key={`${props.card.id}-${flipped}`}
         src={ flipped ? props.card.image : 'https://ik.imagekit.io/wvlrlc0tr/tarot/back.png'} 
         onTap={():void => handleFlip()}
-        whileTap={ !flipped ? {rotateY: [0, 90], scale: .9}: {}}
-        transition={{ type: "spring", stiffness: 480, damping: 20 }}
+        //whileTap={ !flipped ? {rotateY: [0, 90], scale: .9}: {}}
+        initial={{
+          rotateY: 90,
+        }}
+        animate={{
+          rotateY: 0,
+        }}
+        exit={{
+          rotateY: 90,
+        }}
+        transition={{duration: .3}}
         whileHover={{
           scale: 1.05,
           cursor: 'pointer',
@@ -41,8 +50,7 @@ const CardComponent = (props: Props) => {
         }}
       />
       <h3
-        // style={ flipped ? {display: "block"} : {display: "none"}}
-      >{flipped ? props.card.name : "???"}</h3>
+     >{flipped ? props.card.name : "???"}</h3>
       <CardModal isOpen={isOpen} toggle={toggle} card={props.card}>
         <div id='inner-card'>
           <h2>{props.card.name}</h2>
@@ -53,7 +61,7 @@ const CardComponent = (props: Props) => {
           <p id='card-bio'>{props.card.bio}</p>
         </div>
       </CardModal>
-    </div>
+    </AnimatePresence>
   )
 }
 

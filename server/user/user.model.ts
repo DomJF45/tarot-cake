@@ -7,10 +7,11 @@ import { iUser } from './user.interface';
 import { unique } from 'jspsych/dist/modules/utils';
 
 export interface UserDocument extends mongoose.Document {
-  email: string, 
-  name: string,
-  password: string,
-  history?: iHistory[],
+  email: string; 
+  name: string;
+  password: string;
+  history?: iHistory[];
+  lastLogin: string;
  
   isValidPassword(password: string): Promise<Error | boolean>
 
@@ -52,7 +53,8 @@ const UserSchema = new Schema({
     type: String,
     required: [true, 'Please add a password']
   },
-  history: [HistorySchema]
+  history: [HistorySchema],
+  lastLogin: Date,
 }, { timestamps: true });
 
 UserSchema.pre<UserDocument>('save', async function(next) {
